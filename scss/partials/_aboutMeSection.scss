@@ -1,0 +1,77 @@
+.aboutMeInfo{
+	background:url(../images/backgroundImage.png)no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 0;
+	background-size: cover;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+}
+.basicInfo{
+	-webkit-box-shadow:5px 10px 35px 0 rgba(0, 0, 0, 0.72);
+	-moz-box-shadow:5px 10px 35px 0 rgba(0, 0, 0, 0.72);
+	box-shadow:5px 10px 35px 0 black;
+	opacity:0.9;
+	color:white;
+	padding:5px;
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	h2{
+		font-size:30px;
+		@include breakpoint(large-mobile) {
+				font-size:20px;
+		}
+	}
+	p{
+		font-size:36px;
+		@include breakpoint(large-mobile) {
+			font-size:24px;
+		}
+	}
+}
+//picture and animated quatation in the section aboutMe
+.container {
+	cursor:pointer;
+	position:relative;
+	overflow:hidden;
+	width:300px;
+	height:200px;
+	img{
+		-webkit-box-shadow:5px 10px 35px 0 rgba(0, 0, 0, 0.72);
+		-moz-box-shadow:5px 10px 35px 0 rgba(0, 0, 0, 0.72);
+		box-shadow:10px 10px 20px 0 black;
+	}
+}
+.container .textboxImg {
+	position:absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:200px;
+	margin-left:-310px;
+	text-align: center;
+}
+.container:hover .textboxImg {
+	margin-left:0;
+	background:rgba(0,0,0, 0.1);
+}
+.container img {
+	margin-left:0;
+	margin-top:25px;
+}
+.container:hover img {
+	margin-left:310px;
+}
+.textImg {
+	padding-top: 0;
+	font-size:15px;
+}
+.container img, .textboxImg {
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}

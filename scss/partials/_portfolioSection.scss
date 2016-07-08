@@ -1,0 +1,167 @@
+.portfolioSection{
+  background: rgba(0, 0, 0, 0.1);
+  border:1px solid lightgray;
+  box-shadow: 10px 10px 20px #888888;
+}
+.slider{
+  border:2px solid #FF00FF;
+  overflow:hidden;
+  width:0;
+  font-size: 0;
+  h2{
+    font-size:38px;
+    text-align: center;
+    @include breakpoint(large-mobile) {
+      font-size:24px;
+    }
+  }
+  p{
+    font-size:36px;
+    text-align: center;
+    @include breakpoint(large-mobile) {
+      font-size:18px;
+    }
+  }
+}
+.slider ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  position: relative;
+}//new
+.hoverableContent{
+  position:relative;
+overflow:hidden;
+}
+.hoverableContent .textbox {
+  width:787px;
+  height:450px;
+  position:absolute;
+  top:0;
+  left:0;
+  margin-top:-450px;
+  background-color: rgba(0,0,0,0.6);
+  width:787px;
+  height:450px;
+  @include breakpoint(large-mobile) {
+    width:356px;
+    height:200px;
+  }
+}
+.hoverableContent:hover .textbox {
+  margin-top:0;
+}
+.text {
+  color:white;
+  font-weight:bold;
+  font-size:30px;
+  padding-top: 150px;
+  @include breakpoint(large-mobile) {
+    padding-top: 50px;
+  }
+}
+.textbox {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.slider li{
+  display:inline-block;
+}
+div[class^="portfolioImage_"]{//all images from portfolio
+   width:787px;
+   height:450px;
+   cursor:pointer;
+   @include breakpoint(large-mobile) {
+     width:356px;
+     height:200px;
+   }
+ }
+.portfolioImage_1{
+  background:url(../images/portfolioImage1.png)center,no-repeat;
+  background-size: cover;
+}
+
+.portfolioImage_2{
+  background:url(../images/portfolioImage2.png)center,no-repeat;
+  background-size: cover;
+
+}
+.portfolioImage_3{
+  background:url(../images/project3.png)center,no-repeat;
+  background-size: cover;
+}
+.portfolioImage_4{
+  background:url(../images/portfolioImage4.png)center,no-repeat;
+  background-size: cover;
+}
+//buttons for slider
+.buttons{
+   padding:3%;
+   display:flex;
+   justify-content: space-between;
+   text-align: center;
+   @include breakpoint(large-mobile) {
+     margin-top:10px;
+     font-size:24px;
+   }
+  button{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:black;
+    display: inline-block;
+    border-radius: 3%;
+    background-color: #ff00ff;
+    border: none;
+    padding: 18px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+    width: 150px;
+    font-size:28px;
+    @include breakpoint(large-mobile) {
+      font-size:18px;
+      width:75px;
+      padding:10px;
+    }
+  }
+  button:focus {
+    outline:0;
+  }
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  button span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  button:hover span {
+    padding-right: 25px;
+  }
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+}
+.portfolioSlider{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  color:black;
+  h5{
+    font-size:38px;
+    color:black;
+    @include breakpoint(large-mobile) {
+      font-size:20px;
+    }
+  }
+  a{
+    color:#ff00ff;
+  }
+}

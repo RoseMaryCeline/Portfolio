@@ -1,0 +1,116 @@
+//footer
+@-webkit-keyframes spinnerRotate
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+
+.contactDetails{
+  margin-top:50px;
+  width:100%;
+	display:flex;
+  justify-content: center;
+	flex-direction: column;
+  margin-bottom:40px;
+  div{
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:auto;
+    padding:2%;
+    margin-bottom:25px;
+  }
+  img{
+    width:auto;
+    height:auto;
+    margin-right:50px;
+    @include breakpoint(large-mobile) {
+      width:50%;
+      height:50%;
+    }
+  }
+   div img:hover{
+     -webkit-animation-name: spinnerRotate;
+     -webkit-animation-duration: 5s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: linear;
+     -moz-animation-name: spinnerRotate;
+     -moz-animation-duration: 5s;
+     -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+   }
+  a{
+    text-decoration:none;
+  }
+  p{
+    margin-left:1%;
+    font-size:54px;
+    color:black;
+    @include breakpoint(large-mobile) {
+    font-size:18px;
+    }
+  }
+  p:hover{
+     transform:scale(1.2);
+  }
+}
+#first{
+  img{
+    @include breakpoint(large-mobile) {
+    width:60px;
+    height:60px;
+    }
+  }
+}
+#second{
+  img{
+    @include breakpoint(large-mobile) {
+      width:60px;
+      height:60px;
+    }
+  }
+}
+#third{
+  img{
+    @include breakpoint(large-mobile) {
+      width:60px;
+      height:60px;
+    }
+  }
+}
+#first:hover{
+ opacity:0.9;
+ -webkit-box-shadow:5px 10px 35px 0 rgba(0, 0, 0, 0.72);
+ -moz-box-shadow:5px 10px 35px 0 rgba(0, 0, 0, 0.72);
+ box-shadow:5px 10px 35px 0 black;
+}
+#second:hover{
+  @extend #first;
+}
+#third:hover{
+  @extend #first;
+}
+
+//footer
+footer{
+  background:black;
+  width:auto;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:18px;
+  color:white;
+  margin-top:0;
+  margin-bottom:0;
+  text-align:center;
+  a{
+    color:#ff00ff;
+    text-decoration:none;
+  }
+  @include breakpoint(large-mobile) {
+    font-size: 13px;
+  }
+}
